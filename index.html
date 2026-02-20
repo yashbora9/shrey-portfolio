@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrey Srivastava | Founder & CEO, Quefto Technologies</title>
+    <meta name="description" content="Shrey Srivastava - Tech entrepreneur, developer, and digital growth strategist based in Berlin. Founder of Quefto Technologies helping 360+ founders build their digital presence.">
+    <meta name="keywords" content="Shrey Srivastava, Quefto Technologies, Web Developer, Digital Strategist, Berlin, SEO, Graphic Design, App Development">
+    <meta property="og:title" content="Shrey Srivastava | Founder & CEO, Quefto Technologies">
+    <meta property="og:description" content="Tech entrepreneur, developer, and digital growth strategist based in Berlin. Founded Quefto Technologies at 18.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shreysrivastava.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-primary: #0a0a0f; --bg-secondary: #12121a; --bg-card: #1a1a2e; --text-primary: #e4e4e7; --text-secondary: #a1a1aa; --accent-start: #4F46E5; --accent-end: #06B6D4; --accent-gradient: linear-gradient(135deg, #4F46E5, #06B6D4); --border: rgba(255, 255, 255, 0.08); --shadow: 0 4px 20px rgba(0, 0, 0, 0.3); --shadow-glow: 0 0 30px rgba(79, 70, 229, 0.3); --font-heading: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif; --hero-title: clamp(2.5rem, 6vw, 4.5rem); --section-title: clamp(1.75rem, 4vw, 2.5rem); }
+        [data-theme="light"] { --bg-primary: #fafafa; --bg-secondary: #f4f4f5; --bg-card: #ffffff; --text-primary: #18181b; --text-secondary: #52525b; --border: rgba(0, 0, 0, 0.08); --shadow: 0 4px 20px rgba(0, 0, 0, 0.08); --shadow-glow: 0 0 30px rgba(79, 70, 229, 0.15); }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg-primary); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; transition: background 0.3s ease, color 0.3s ease; }
+        a { color: inherit; text-decoration: none; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 6rem 0; }
+        .section-title { font-family: var(--font-heading); font-size: var(--section-title); font-weight: 700; text-align: center; margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; }
+        .gradient-text { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 50px; font-family: var(--font-body); font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border: none; }
+        .btn-primary { background: var(--accent-gradient); color: white; box-shadow: var(--shadow-glow); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(79, 70, 229, 0.5); }
+        .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--text-primary); }
+        .btn-outline:hover { border-color: var(--accent-start); color: var(--accent-start); }
+        .scroll-progress { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: var(--accent-gradient); z-index: 1001; transition: width 0.1s ease; }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: rgba(10, 10, 15, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: all 0.3s ease; }
+        [data-theme="light"] .navbar { background: rgba(250, 250, 250, 0.8); }
+        .navbar.scrolled { padding: 0.75rem 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .nav-logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); transition: color 0.3s ease; position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent-gradient); transition: width 0.3s ease; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-actions { display: flex; align-items: center; gap: 1rem; }
+        .theme-toggle { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; font-size: 1.2rem; }
+        .theme-toggle:hover { border-color: var(--accent-start); transform: rotate(15deg); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 0.5rem; }
+        .hamburger span { width: 25px; height: 2px; background: var(--text-primary); transition: all 0.3s ease; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-primary); z-index: 999; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { font-size: 1.5rem; font-family: var(--font-heading); font-weight: 600; }
+        .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 2rem; cursor: pointer; }
+        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 80px; }
+        .hero-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79, 70, 229, 0.15), transparent), radial-gradient(ellipse 60% 40% at 80% 60%, rgba(6, 182, 212, 0.1), transparent); z-index: -1; }
+        .hero-particles { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; overflow: hidden; }
+        .particle { position: absolute; width: 4px; height: 4px; background: var(--accent-start); border-radius: 50%; opacity: 0.3; animation: float 15s infinite ease-in-out; }
+        @keyframes float { 0%, 100% { transform: translateY(0) translateX(0); } 25% { transform: translateY(-30px) translateX(10px); } 50% { transform: translateY(-15px) translateX(-10px); } 75% { transform: translateY(-40px) translateX(5px); } }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-text h1 { font-family: var(--font-heading); font-size: var(--hero-title); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero-text h1 .accent { font-style: italic; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .typing-text { color: var(--accent-start); font-weight: 600; min-width: 150px; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-image { display: flex; justify-content: center; align-items: center; position: relative; }
+        .hero-avatar { width: 400px; height: 400px; border-radius: 50%; background: var(--accent-gradient); padding: 4px; position: relative; animation: pulse-glow 3s infinite ease-in-out; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 30px rgba(79, 70, 229, 0.3); } 50% { box-shadow: 0 0 60px rgba(79, 70, 229, 0.5); } }
+        .hero-avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 8rem; font-weight: 700; color: var(--accent-start); }
+        .hero-badge { position: absolute; bottom: 20px; right: 20px; background: var(--bg-card); border: 1px solid var(--border); padding: 0.75rem 1rem; border-radius: 50px; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 500; }
+        .hero-badge .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .about { background: var(--bg-secondary); }
+        .about-content { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; }
+        .about-image { position: relative; }
+        .about-img-wrapper { border-radius: 20px; overflow: hidden; background: var(--accent-gradient); padding: 4px; }
+        .about-img-inner { background: var(--bg-card); border-radius: 16px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 6rem; }
+        .about-text h2 { font-family: var(--font-heading); font-size: var(--section-title); font-weight: 700; margin-bottom: 1.5rem; }
+        .about-text p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.8; }
+        .about-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }
+        .badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 50px; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; }
+        .badge:hover { border-color: var(--accent-start); transform: translateY(-2px); }
+        .stats { background: var(--bg-primary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+        .stat-item { padding: 2rem; }
+        .stat-number { font-family: var(--font-heading); font-size: 3rem; font-weight: 700; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+        .stat-label { color: var(--text-secondary); font-size: 1rem; font-weight: 500; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent-gradient); transform: scaleX(0); transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-glow); border-color: var(--accent-start); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon { width: 60px; height: 60px; background: var(--accent-gradient); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1.5rem; }
+        .service-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .service-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+        .timeline { background: var(--bg-secondary); }
+        .timeline-container { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline-container::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: var(--border); }
+        .timeline-item { display: flex; justify-content: flex-end; padding-right: calc(50% + 30px); position: relative; margin-bottom: 3rem; }
+        .timeline-item:nth-child(even) { justify-content: flex-start; padding-right: 0; padding-left: calc(50% + 30px); }
+        .timeline-content { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; max-width: 350px; position: relative; transition: all 0.3s ease; }
+        .timeline-content:hover { border-color: var(--accent-start); transform: translateX(-5px); }
+        .timeline-item:nth-child(even) .timeline-content:hover { transform: translateX(5px); }
+        .timeline-year { position: absolute; left: calc(100% + 30px); top: 0; background: var(--accent-gradient); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .timeline-item:nth-child(even) .timeline-year { left: auto; right: calc(100% + 30px); }
+        .timeline-dot { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 16px; height: 16px; background: var(--accent-start); border-radius: 50%; border: 3px solid var(--bg-secondary); }
+        .timeline-content h3 { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .timeline-content p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .testimonials-track { display: flex; gap: 1.5rem; overflow-x: auto; padding: 1rem 0; scrollbar-width: none; -ms-overflow-style: none; }
+        .testimonials-track::-webkit-scrollbar { display: none; }
+        .testimonial-card { min-width: 350px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; flex-shrink: 0; }
+        .testimonial-stars { color: #fbbf24; margin-bottom: 1rem; font-size: 1.25rem; }
+        .testimonial-text { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+        .testimonial-author { font-weight: 600; color: var(--text-primary); }
+        .cta { background: var(--bg-secondary); text-align: center; }
+        .cta-content { max-width: 700px; margin: 0 auto; }
+        .cta h2 { font-family: var(--font-heading); font-size: var(--section-title); font-weight: 700; margin-bottom: 1rem; }
+        .cta p { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem; }
+        .cta .btn { font-size: 1.1rem; padding: 1rem 2.5rem; }
+        .footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 3rem 0 1.5rem; }
+        .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem; }
+        .footer-logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .footer-socials { display: flex; gap: 1rem; }
+        .social-link { width: 44px; height: 44px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; transition: all 0.3s ease; }
+        .social-link:hover { background: var(--accent-gradient); border-color: transparent; transform: translateY(-3px); }
+        .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.9rem; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        @media (max-width: 1024px) { .hero-content { grid-template-columns: 1fr; text-align: center; gap: 3rem; } .hero-buttons { justify-content: center; } .hero-subtitle { justify-content: center; } .hero-image { order: -1; } .hero-avatar { width: 300px; height: 300px; } .hero-avatar-inner { font-size: 5rem; } .about-content { grid-template-columns: 1fr; text-align: center; } .about-badges { justify-content: center; } .services-grid { grid-template-columns: repeat(2, 1fr); } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } .services-grid { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; } .stat-number { font-size: 2rem; } .timeline-container::before { left: 20px; } .timeline-item, .timeline-item:nth-child(even) { padding-left: 50px; padding-right: 0; justify-content: flex-start; } .timeline-year, .timeline-item:nth-child(even) .timeline-year { left: 50px; right: auto; top: -30px; } .timeline-dot { left: 20px; } .testimonial-card { min-width: 280px; } .footer-content { flex-direction: column; text-align: center; } }
+        @media (max-width: 480px) { .section { padding: 4rem 0; } .hero-buttons { flex-direction: column; width: 100%; } .hero-buttons .btn { width: 100%; justify-content: center; } .stats-grid { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Shrey Srivastava</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="mobile-close" id="mobileClose">×</span>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#journey">Journey</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Building Digital Empires That <span class="accent">Scale</span></h1>
+                    <p class="hero-subtitle">Founder of Quefto Technologies · <span class="typing-text" id="typingText"></span> · Based in Berlin 🇩🇪</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-avatar"><div class="hero-avatar-inner">SS</div></div>
+                    <div class="hero-badge"><span class="dot"></span>Available for Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <div class="about-image">
+                    <div class="about-img-wrapper"><div class="about-img-inner">🚀</div></div>
+                </div>
+                <div class="about-text">
+                    <h2>Hey, I'm <span class="gradient-text">Shrey Srivastava</span></h2>
+                    <p>I'm Shrey Srivastava — a tech entrepreneur, developer, and digital growth strategist based in Berlin. At 18, I founded Quefto Technologies, an IT and marketing solutions company that has since helped 360+ founders build their websites, brands, and digital presence from scratch.</p>
+                    <p>I specialize in web development, SEO, graphic design, mobile applications, and full-stack digital marketing. My mission is to democratize technology for businesses of all sizes — from scrappy startups to established enterprises. When I'm not building products, I'm exploring the intersection of creativity and code.</p>
+                    <div class="about-badges">
+                        <span class="badge">🚀 Entrepreneur</span>
+                        <span class="badge">💻 Developer</span>
+                        <span class="badge">📈 Growth Strategist</span>
+                        <span class="badge">🎨 Designer</span>
+                        <span class="badge">🇩🇪 Berlin-Based</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stats section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in"><div class="stat-number" data-target="360">0</div><div class="stat-label">Founders Helped</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="5">0</div><div class="stat-label">Years Experience</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="50">0</div><div class="stat-label">Projects Delivered</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="12000">0</div><div class="stat-label">LinkedIn Community</div></div>
+            </div>
+        </div>
+    </section>
+    <section class="services section" id="services">
+        <div class="container">
+            <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+            <p class="section-subtitle">Comprehensive digital solutions tailored to your needs</p>
+            <div class="services-grid">
+                <div class="service-card fade-in"><div class="service-icon">🌐</div><h3>Website Development</h3><p>Responsive, conversion-focused websites tailored to your brand. From landing pages to full e-commerce stores.</p></div>
+                <div class="service-card fade-in"><div class="service-icon">🎨</div><h3>Graphic Design</h3><p>Logos, social media creatives, branding kits, and visual identities that stand out.</p></div>
+                <div class="service-card fade-in"><div class="service-icon">📈</div><h3>Digital Marketing</h3><p>SEO, social media marketing, content marketing, and paid ads to drive measurable growth.</p></div>
+                <div class="service-card fade-in"><div class="service-icon">🎬</div><h3>Video Production</h3><p>Professional content shoots, motion graphics, and brand storytelling that connects.</p></div>
+                <div class="service-card fade-in"><div class="service-icon">📱</div><h3>App Development</h3><p>Cross-platform mobile applications designed for performance and user engagement.</p></div>
+                <div class="service-card fade-in"><div class="service-icon">💡</div><h3>Brand Consulting</h3><p>1-on-1 strategy sessions to help founders craft their brand narrative and go-to-market plan.</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="timeline section" id="journey">
+        <div class="container">
+            <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+            <p class="section-subtitle">From Lucknow to Berlin — building the dream</p>
+            <div class="timeline-container">
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">2020</span><div class="timeline-dot"></div><h3>Founded Quefto Technologies</h3><p>Started at age 18 in Lucknow, India. Generated revenue within 1 month of incorporation.</p></div></div>
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">2021</span><div class="timeline-dot"></div><h3>Scaling Operations</h3><p>Scaled to serving clients across multiple industries — startups, SMEs, and enterprises.</p></div></div>
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">2022</span><div class="timeline-dot"></div><h3>Expanded Services</h3><p>Added video production, app development, and full-stack marketing to our offerings.</p></div></div>
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">2023</span><div class="timeline-dot"></div><h3>Moved to Berlin + Joined TCS</h3><p>Relocated to Berlin to study at HTW Berlin while running Quefto remotely. Joined Tata Consultancy Services as Assistant System Engineer.</p></div></div>
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">2024</span><div class="timeline-dot"></div><h3>Founded KsunDigital</h3><p>Launched digital marketing consultancy. Grew LinkedIn following to 12,000+.</p></div></div>
+                <div class="timeline-item fade-in"><div class="timeline-content"><span class="timeline-year">Present</span><div class="timeline-dot"></div><h3>Building the Future</h3><p>Building the next phase of Quefto while completing degree in Berlin. Always shipping.</p></div></div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client <span class="gradient-text">Testimonials</span></h2>
+            <p class="section-subtitle">What my clients say</p>
+            <div class="testimonials-track">
+                <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Quefto transformed our entire digital presence. Shrey's team delivered well before the deadline with smooth communication."</p><p class="testimonial-author">— Happy Client</p></div>
+                <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"Great service. Personally tailored to fit my project exactly. Highly recommended."</p><p class="testimonial-author">— Trustpilot Reviewer</p></div>
+                <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"The support was incredible and worked with us all the way through."</p><p class="testimonial-author">— Business Owner</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta section" id="contact">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Let's Build Something Amazing Together</h2>
+                <p>Book a free 1-on-1 consultation to discuss your project</p>
+                <a href="mailto:shrey@quefto.com" class="btn btn-primary">Book Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Shrey Srivastava</div>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/shreysri" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="https://quefto.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Website">🌐</a>
+                    <a href="mailto:shrey@quefto.com" class="social-link" aria-label="Email">✉️</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shrey Srivastava. All Rights Reserved.</p>
+                <p>Built with ☕ and code in Berlin</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : '            'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'light' ? '🌙' : '☀️';
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        
+        hamburger.addEventListener('click', () => mobileMenu.classList.add('active'));
+        mobileClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+
+        // Scroll progress
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Typing effect
+        const typingText = document.getElementById('typingText');
+        const phrases = ['Web Developer', 'Digital Strategist', 'Entrepreneur', 'Designer'];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeEffect() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
+            }
+        }
+        typeEffect();
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Counter animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current).toLocaleString();
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target.toLocaleString() + (target >= 1000 ? '+' : '+');
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(counter => counterObserver.observe(counter));
+
+        // Create particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
